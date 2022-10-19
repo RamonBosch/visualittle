@@ -8,6 +8,8 @@ const buttonOptionB = document.getElementById('button-option-B')
 const buttonOptionNONE = document.getElementById('button-option-none')
 const buttonRedoQuiz = document.getElementById('button-redo')
 const buttonRandomize = document.getElementById('button-randomize')
+const burgerbutton = document.getElementById('burger-button')
+const toplinks = document.getElementById('top-links')
 startButton.addEventListener('click', startQuiz)
 startButtonBottom.addEventListener('click', startQuizBottom)
 
@@ -46,8 +48,8 @@ let totalParameters = {
 let answeredQuestions = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 let questionTextData = [
-    "Your brand feels more comfortable when working with its...",
-    'What does your brand use to deliver an important message?',
+    "Your brand feels more comfortable working with its...",
+    'How does your brand deliver important messages?',
     'On vacation, your brand prefers to be in the...',
     "Your brand's pet is a...",
     "Your brand would rather freshen up with a...",
@@ -56,10 +58,10 @@ let questionTextData = [
     'Which movie genre does your brand prefer?',
     'Your brand would love playing the...',
     "When saluting friends, your brand prefers a...",
-    "On your brand's desktop, there's always a pot with...",
+    "On your brand's desktop, there's always a jar with...",
 
-    'What does your brand use to write something to be remembered?',
-    'When looking for inspiration, your brand digs into the...',
+    'What does your brand use to write reminders?',
+    'Looking for inspiration, your brand digs into the...',
     "If your brand was a building, it would be a...",
     'If your brand was a tree, it would be a...',
     'Your brand would rather read a book about...',
@@ -73,7 +75,7 @@ let questionTextData = [
     "Your brand can't throw a party without a...",
     "What's the TV program your brand can't stop watching?",
     "Your brand won't leave home without its...",
-    "On a conversation, what's your brand's strategy to break the ice?",
+    "How does your brand break the ice?",
     "It's game night! Your brand can't wait to play..."
 ];
 
@@ -239,7 +241,7 @@ var resultsTitle1 = [
     'Disruptive',
     'Exclusive',
     'Serious',
-    'Technologic',
+    'High-tech',
     'Power',
     'Classic',
     'Inclusive',
@@ -247,17 +249,21 @@ var resultsTitle1 = [
 ];
 
 var resultsTitle2 = [
-    'Natural',
-    'Soft',
-    'Trendy',
-    'Luxury',
-    'Business',
-    'Synthetic',
-    'Strong',
-    'Vintage',
-    'United',
-    'Wit',
+    'Organic',
+    'Delicate',
+    'Disruptive',
+    'Exclusive',
+    'Serious',
+    'High-tech',
+    'Power',
+    'Classic',
+    'Inclusive',
+    'Fun',
 ];
+
+let root = document.documentElement;
+
+
 
 
 //Intro
@@ -520,7 +526,7 @@ var resultsInfoSecondMi = [
 ];
 
 var resultsSecondHi = [
-    'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-high-orgnaic.webp',
+    'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-high-organic.webp',
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-high-delicate.webp',
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-high-disruptive.webp',
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-high-luxury.webp',
@@ -533,7 +539,7 @@ var resultsSecondHi = [
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-neutral.webp'
 ];
 var resultsSecondMi = [
-    'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-orgnaic.webp',
+    'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-organic.webp',
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-delicate.webp',
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-disruptive.webp',
     'img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-luxury.webp',
@@ -552,10 +558,26 @@ buttonOptionB.addEventListener('click', chooseOptionB)
 buttonOptionNONE.addEventListener('click', chooseOptionNONE)
 buttonRandomize.addEventListener('click', randomize)
 
+
+
+const toggleDarkMode = document.getElementById('toggle-dark-mode')
+toggleDarkMode.addEventListener('click', toggleTheme)
+
+function toggleTheme() {
+    var theme = document.getElementsByTagName('link')[0];
+    if (theme.getAttribute('href') == 'style-visualittle.css') {
+        theme.setAttribute('href', 'style-visualittle-dark.css');
+    } else {
+        theme.setAttribute('href', 'style-visualittle.css');
+    }
+}
+
 function startQuiz() {
     if (amountQuestion === 0) {
         screenStart.classList.add('hide');
+        startButtonBottom.classList.add('hide');
         screenQuestion.classList.remove('hide');
+        root.style.setProperty('--main-color', "#ecce92");
     }
     if (amountQuestion < 20) {
         var correctQuestionNumber = false;
@@ -604,7 +626,7 @@ function startQuiz() {
             document.getElementById("buttonTextB").innerHTML = buttonTextDataB[currentQuestion];
             document.getElementById("questionText").innerHTML = questionTextData[currentQuestion];
             document.getElementById('percent-progress-top').style.width = ((amountQuestion + 1) * 5) + "%";
-            document.getElementById('percent-progress-number').innerHTML = `${amountQuestion + 1}/20`;
+            document.getElementById('percent-progress-number').innerHTML = `Question ${amountQuestion + 1} of 20`;
             document.getElementById("buttonIllustrationA").src = illustrationDataA[currentQuestion];
             document.getElementById("buttonIllustrationB").src = illustrationDataB[currentQuestion];
             amountQuestion++
@@ -620,6 +642,7 @@ function startQuiz() {
     } else {
         screenQuestion.classList.add('hide')
         screenResults.classList.remove('hide')
+        root.style.setProperty('--main-color', "#aacea0");
         switch (totalParameters.totalOrg) {
             case 0: paramOrg = 0; paramArt = 3; break;
             case 1: paramOrg = 0; paramArt = 2; break;

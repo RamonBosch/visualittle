@@ -1,0 +1,467 @@
+:root {
+	--main-color: #b5d5e1;
+	--dark-color: #565656;
+	--clear-color: #fff;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Work Sans', sans-serif;
+	color: var(--dark-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2 {
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 46px;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 24px;
+}
+
+p {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+nav {
+	background-color: var(--main-color);
+	width: 100%;
+	margin: 0;
+	padding: 30px;
+}
+
+nav img {
+	max-width: 140px;
+}
+
+body {
+	margin: 0;
+	z-index: 0;
+	background-color: var(--clear-color);
+}
+
+main {
+	margin: 0;
+}
+
+.clear-color {
+	color: var(--clear-color);
+}
+
+.mode-toggler {
+	background-color: transparent;
+	border-color: transparent;
+	float: right;
+}
+
+.toggler-border {
+	border: 2px solid var(--dark-color);
+	width: 40px;
+	height: 26px;
+	border-radius: 13px;
+	position: fixed;
+	z-index: 30;
+	top: 26px;
+	right: 28px;
+}
+
+.toggler-switch {
+	background-color: var(--dark-color);
+	width: 20px;
+	height: 20px;
+	margin: 1px;
+	border-radius: 13px;
+	float: right;
+}
+
+.width-container-color {
+	background-color: var(--main-color);
+	margin: 0;
+}
+
+.img-logo {
+	content: url("img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg");
+}
+
+.max-width-container {
+	margin: auto;
+	max-width: 400px;
+	padding: 0 30px;
+}
+
+.animation-container {
+	width: 100%;
+	height: 120px;
+	position: relative;
+	display: block;
+}
+
+.rain-container {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.raindrop {
+	width: 2px;
+	background-color: var(--dark-color);
+	position: absolute;
+	z-index: 1;
+	animation: raining 0.5s linear infinite;
+	height: 10px;
+	top: 44%;
+}
+
+.raindrop:nth-of-type(1) {
+	left: 40%;
+}
+
+.raindrop:nth-of-type(2) {
+	left: 45%;
+	animation-delay: 0.35s
+}
+
+.raindrop:nth-of-type(3) {
+	left: 50%;
+}
+
+.raindrop:nth-of-type(4) {
+	left: 55%;
+	animation-delay: 0.35s
+}
+
+.raindrop:nth-of-type(5) {
+	left: 60%;
+}
+
+.raindrop:nth-of-type(6) {
+	left: 40%;
+	animation-delay: 0.25s
+}
+
+.raindrop:nth-of-type(7) {
+	left: 45%;
+	animation-delay: 0.1s
+}
+
+.raindrop:nth-of-type(8) {
+	left: 50%;
+	animation-delay: 0.25s
+}
+
+.raindrop:nth-of-type(9) {
+	left: 55%;
+	animation-delay: 0.1s
+}
+
+.raindrop:nth-of-type(10) {
+	left: 60%;
+	animation-delay: 0.25s
+}
+
+.stormy {
+	width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 2;
+	position: inherit;
+}
+
+@keyframes raining {
+	0% {
+		top: -5%;
+		height: 10px;
+	}
+
+	100% {
+		top: 50%;
+		height: 0px;
+	}
+}
+
+.action-button,
+#button-option-none {
+	display: block;
+	margin: 0 auto;
+	border-style: none;
+	font-weight: 400;
+	font-size: 24px;
+	background-color: var(--clear-color);
+	border-radius: 50px;
+	height: 70px;
+	width: 200px;
+}
+
+#button-option-none {
+	width: 100%;
+
+}
+
+.question-button {
+	float: auto;
+	margin: 0 auto;
+	border-style: none;
+	font-weight: 400;
+	font-size: 24px;
+	background-color: var(--clear-color);
+	border-radius: 50px;
+	height: 60vw;
+	min-height: 200px;
+	max-height: 400px;
+	width: 48%;
+}
+
+#questionText {
+	min-height: 80px;
+}
+
+#sectionButtonsFrame {
+	display: flex;
+	flex-direction: row;
+}
+
+#sectionButtonsFrame p {
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+#buttonIllustrationA {
+	animation: option 2s alternate-reverse infinite;
+
+}
+
+#buttonIllustrationB {
+	animation: option 2s alternate-reverse infinite;
+
+}
+
+@keyframes option {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	100% {
+		transform: scale3d(0.9, 0.9, 0.9);
+	}
+}
+
+#screen-question h3 {
+	margin: 0 0 20px 0;
+}
+
+#questionText {
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 400;
+
+}
+
+.results h3 {
+	margin-top: 60px;
+	;
+}
+
+.sun {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	z-index: 1;
+	animation: sunny 5s linear infinite;
+	top: -8%;
+	left: 50%;
+}
+
+.sun img {
+	position: absolute;
+	z-index: 1;
+	content: url("img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-sun.svg");
+}
+
+@keyframes sunny {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.progress-names {
+	display: flex;
+	justify-content: space-between;
+}
+
+.progress-names p {
+	margin-bottom: 10px;
+}
+
+.progress-bar {
+	height: 10px;
+	border-radius: 5px;
+	margin: auto;
+	width: 100%;
+	background-color: #ffffff50;
+	display: flex;
+}
+
+.progress-bottom-center {
+	justify-content: center;
+}
+
+.progress-bottom-right {
+	justify-content: right;
+}
+
+.progress-bottom-left {
+	justify-content: left;
+}
+
+.progress-top {
+	height: 10px;
+	border-radius: 5px;
+	justify-content: left;
+	width: 0%;
+	background-color: var(--dark-color);
+}
+
+.progress-parameter-left {
+	width: 30%;
+	background-color: var(--dark-color);
+	border-radius: 5px 0 0 5px;
+	margin: unset;
+}
+
+.progress-parameter-right {
+	width: 30%;
+	background-color: var(--dark-color);
+	border-radius: 0 5px 5px 0;
+	margin: unset;
+}
+
+
+.resultsDivColor {
+	width: 25%;
+	height: 100px;
+	display: inline-block;
+	margin: auto;
+	padding: 0;
+}
+
+.umbrella {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	z-index: 3;
+	animation: umbrella 4s ease-in-out infinite;
+	top: 0%;
+	left: 50%;
+}
+
+.umbrella img {
+	position: absolute;
+	z-index: 1;
+	transform: translate(20%, -38%);
+	content: url("img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-umbrella.svg");
+}
+
+@keyframes umbrella {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	20% {
+		transform: rotate(360deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.results a {
+	text-decoration: underline;
+	text-align: center;
+}
+
+.color-background {
+	background-color: var(--main-color);
+}
+
+.dark-background {
+	background-color: var(--dark-color);
+}
+
+.bottom-section div {
+	display: flex;
+	flex-direction: column;
+}
+
+.icon-img {
+	margin-top: 50px;
+	margin-bottom: -20px;
+}
+
+.separator {
+	max-height: 120px;
+}
+
+footer a {
+	text-decoration: underline var(--clear-color);
+	font-size: 304px;
+}
+
+@media only screen and (min-width: 600px) {
+
+	a:hover,
+	button:not(.mode-toggler):hover {
+		transform: scale(1.05);
+	}
+
+	a:hover,
+	button:hover {
+		opacity: 0.75;
+		cursor: pointer;
+	}
+
+	.max-width-container {
+		margin: auto;
+		max-width: 500px;
+		padding: 0 30px;
+	}
+
+}
+
+@media only screen and (min-width: 900px) {
+	h1 {
+		font-weight: 600;
+		font-size: 56px;
+		line-height: 74px;
+	}
+
+	.max-width-container {
+		margin: auto;
+		max-width: 600px;
+		padding: 0 30px;
+	}
+
+	.icon-img {
+		height: 50px;
+	}
+}
+
+.hide {
+	display: none;
+}

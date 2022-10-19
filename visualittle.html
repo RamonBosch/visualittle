@@ -4,251 +4,270 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#F6BF1C">
-    <link rel="stylesheet" href="style.css">
+    <meta name="copyright" content="2022 Ramon Bosch" />
+    <link rel="stylesheet" href="style-visualittle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
     <script defer src="app.js"></script>
     <title>Visualittle</title>
   </head>
   <body>
-    <div class="top-bar">
-      <div class="logo">
-        <img src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg">
+    <!-- ----------TOP BAR---------- -->
+    <nav>
+      <div>
+        <a href="/visualittle.html">
+          <img height="24" title="Visualittle logo" alt="Color version of the Visualittle logo" class="img-logo">
+        </a>
+        <button title="Toggle Dark Mode" alt="Button to toggle dark mode" class="mode-toggler" id="toggle-dark-mode">
+          <div class="toggler-border">
+            <div class="toggler-switch"></div>
+          </div>
+          </button>
       </div>
-        <label>
-          <input type="checkbox">
-          <span class="menu"> <span class="hamburger"></span> </span>
-          <ul>
-            <a href="/index">Home</a>
-            <a href="/about">About</a>
-            <a href="/visualittle">Visualittle</a>
-            <a href="/contact">Contact</a>
-          </ul>
-        </label>
-      </div>
-    </div>
-    <div class="main-container">
-      <div class="child-container" id="screen-start">
-        <div style="height: 120px;"></div>
-        <img class="center-img" src="img/visualittle-animations/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-animation-hello.gif">
-        <div style="height: 20px;"></div>
-        <p>Visualittle here! Answer to twenty idea association questions about your brand and I'll give you advice on how to design its visual identity.</p>
-        <div style="height: 30px;"></div>
-        <button id="start-button">Let's do it!</button>
-        <div style="height: 60px;"></div>
-      </div>
-      <div class="hide" id="screen-question">
-        <div style="height: 60px;"></div>
-        <div class="child-container-row">
-          <img class="questionImg" src="img/visualittle-animations/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-animation-idle.gif">
-          <div id="questionText" style="line-height: 1.3rem;">Which one of these options describes RemarkaBall better?</div>
-        </div>
-        <div style="height: 10px;"></div>
-        <div class="child-container-row" id="sectionButtonsFrame">
-          <button id="button-option-A" class="question-button">
-            <div class="buttonDiv">
-              <img style="max-width: 220px; margin: 10% 0% 10%;" id="buttonIllustrationA" src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg">
-              <div style="height: 10%;"></div>
-              <p class="button-text" id="buttonTextA">Circle</p>
+    </nav>
+    <!-- ----------WELCOME---------- -->
+    <main>
+      <div class="width-container-color">
+        <div class="max-width-container" id="screen-start">
+          <header>
+            <div class="separator" style="height: 10vw;"></div>
+            <div alt="Stormy cloud animation" class="animation-container">
+              <div height="100px"></div>
+              <img alt="A cute cloud character" class="stormy" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-stormy.svg">
+              <div class="rain-container">
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+              </div>
             </div>
-          </button>
-          <div style="width:4%;"></div>
-          <button id="button-option-B" class="question-button">
-            <div class="buttonDiv">
-              <img style="max-width: 220px; margin: 10% 0% 10%;" id="buttonIllustrationB" src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg">
-              <div style="height: 1%;"></div>
-              <p class="button-text" id="buttonTextB">Square</p>
+            <h1>A little visual <br>identity brainstorm </h1>
+            <p>Answer to twenty idea association questions about your brand to get ideas on how to design its visual identity.</p>
+            <div class="separator" style="height: 10vw;"></div>
+            <button title="Start Visualittle Quiz" alt="Button to start the quiz" class="action-button" id="start-button">START</button>
+            <div class="separator" style="height: 20vw;"></div>
+          </header>
+        </div>
+      </div>
+      <!-- ----------QUESTIONS---------- -->
+      <section alt="Questions section">
+        <div class="hide width-container-color" id="screen-question">
+          <div class="separator" style="height: 5vw; max-height: 50px;"></div>
+          <div class="max-width-container">
+            <h3 id="percent-progress-number">12/20</h3>
+            <div id="questionText">
+              <p>Which one of these options describes your brand better?</p>
             </div>
-          </button>
+            <div id="sectionButtonsFrame">
+              <button title="Choose this option" alt="Button to choose option A" id="button-option-A" class="question-button">
+                <img alt="Option A illustration" id="buttonIllustrationA" src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg">
+                <p id="buttonTextA">Circle</p>
+              </button>
+              <button title="Choose this option" alt="Button to choose option B" id="button-option-B" class="question-button">
+                <img alt="Option A illustration" id="buttonIllustrationB" src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg">
+                <p id="buttonTextB">Square</p>
+              </button>
+            </div>
+            <div class="separator" style="height: 3vw; max-height: 20px;"></div>
+            <button title="Choose none of the options" alt="Button to choose no option" id="button-option-none">
+              <p>NONE</p>
+            </button>
+            <div class="separator" style="height: 3vw; max-height: 20px;"></div>
+            <div class="progress-bar progress-bottom-left">
+              <div class="progress-top" id="percent-progress-top"></div>
+            </div>
+          </div>
+          <div class="separator" style="height: 16vw;"></div>
         </div>
-        <div style="height: 20px;"></div>
-
-        <div class="child-container">
-          <button class="none-button" id="button-option-none">
-            <p>NONE</p>
-          </button>
-          <p id="percent-progress-number">12/20</p>
-          <div class="progress-bottom">
-            <div class="progress-top" id="percent-progress-top"></div>
+      </section>
+      <!-- ----------RESULTS---------- -->
+      <section class="results" alt="Results section">
+        <div id="screen-results" class="hide">
+          <div class="width-container-color">
+            <div class="max-width-container">
+              <div class="separator" style="height: 10vw;"></div>
+              <div alt="Sunny cloud animation" class="animation-container">
+                <div height="100px"></div>
+                <div class="sun">
+                  <img alt="A little sun behind the cloud" style="z-index: 1;" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-sun.svg">
+                </div>
+                <img alt="A cute cloud character" class="stormy" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-stormy.svg">
+              </div>
+              <h2>Thank you!</h2>
+              <p>Thanks for answering! Here are a few ideas for your brand's visual identity.</p>
+              <div id="scrollStop" style="height: 2vw; max-height: 0px;"></div>
+              <h3 id="resultsDivHeader">Organic Luxury</h3>
+              <div class="progress-names">
+                <p>Organic</p>
+                <p>Technologic</p>
+              </div>
+              <div class="progress-bar progress-bottom-center">
+                <div class="progress-bar progress-bottom-right">
+                  <div class="progress-bar progress-parameter-left" id="percent-progress-org"></div>
+                </div>
+                <div class="progress-bar progress-bottom-left">
+                  <div class="progress-bar progress-parameter-right" id="percent-progress-art"></div>
+                </div>
+              </div>
+              <div class="progress-names">
+                <p>Powerful</p>
+                <p>Delicate</p>
+              </div>
+              <div class="progress-bar progress-bottom-center">
+                <div class="progress-bar progress-bottom-right">
+                  <div class="progress-bar progress-parameter-left" id="percent-progress-pow"></div>
+                </div>
+                <div class="progress-bar progress-bottom-left">
+                  <div class="progress-bar progress-parameter-right" id="percent-progress-del"></div>
+                </div>
+              </div>
+              <div class="progress-names">
+                <p>Exclusive</p>
+                <p>Inclusive</p>
+              </div>
+              <div class="progress-bar progress-bottom-center">
+                <div class="progress-bar progress-bottom-right">
+                  <div class="progress-bar progress-parameter-left" id="percent-progress-lux"></div>
+                </div>
+                <div class="progress-bar progress-bottom-left">
+                  <div class="progress-bar progress-parameter-right" id="percent-progress-inc"></div>
+                </div>
+              </div>
+              <div class="progress-names">
+                <p>Disruptive</p>
+                <p>Classic</p>
+              </div>
+              <div class="progress-bar progress-bottom-center">
+                <div class="progress-bar progress-bottom-right">
+                  <div class="progress-bar progress-parameter-left" id="percent-progress-mod"></div>
+                </div>
+                <div class="progress-bar progress-bottom-left">
+                  <div class="progress-bar progress-parameter-right" id="percent-progress-cla"></div>
+                </div>
+              </div>
+              <div class="progress-names">
+                <p>Serious</p>
+                <p>Fun</p>
+              </div>
+              <div class="progress-bar progress-bottom-center">
+                <div class="progress-bar progress-bottom-right">
+                  <div class="progress-bar progress-parameter-left" id="percent-progress-ser"></div>
+                </div>
+                <div class="progress-bar progress-bottom-left">
+                  <div class="progress-bar progress-parameter-right" id="percent-progress-fun"></div>
+                </div>
+              </div>
+              <div class="separator" style="height: 3vw;"></div>
+              <div>
+                <p id="resultsDivIntro1">organic luxury brand offers the most exclusive side of nature's benefits with the guarantee of a right treatment in the process of the materials used for the production of it's products.</p>
+                <p id="resultsDivIntro2">organic luxury brand offers the most exclusive side of nature's benefits with the guarantee of a right treatment in the process of the materials used for the production of it's products.</p>
+              </div>
+              <div class="separator" style="height: 8vw; max-height: 80px;"></div>
+            </div>
+          </div>
+          <div class="max-width-container">
+            <div class="separator" style="height: 8vw;max-height: 80px;"></div>
+            <div>
+              <h3>Logo</h3>
+            </div>
+            <img alt="Logo idea" src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg" id="resultsDivLogo">
+            <p id="resultsDivInfoLogo">Which one of these options describes your brand better? Which one of these options describes your brand better? Which one of these options describes your brand better?</p>
+            <div class="separator" style="height: 2vw;"></div>
+            <div>
+              <h3>Colors</h3>
+            </div>
+            <div alt="Color palette ideas">
+              <div class="resultsDivColor" id="resultsDivColor1"></div><div class="resultsDivColor" id="resultsDivColor2"></div><div class="resultsDivColor" id="resultsDivColor3"></div><div class="resultsDivColor" id="resultsDivColor4"></div>
+            </div>
+            <p id="resultsDivInfoColor">Which one of these options describes your brand better? Which one of these options describes your brand better? Which one of these options describes your brand better?</p>
+            <div class="separator" style="height: 2vw;"></div>
+            <div>
+              <h3>Fonts</h3>
+            </div>
+            <img alt="Font pairing idea" src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg" id="resultsDivFont">
+            <p id="resultsDivInfoFont">Which one of these options describes your brand better? Which one of these options describes your brand better? Which one of these options describes your brand better?</p>
+            <div class="separator" style="height: 2vw;"></div>
+            <div>
+              <h3>Secondary</h3>
+            </div>
+            <img alt="Secondary element idea" src="img/visualittle-webp/visualittle-brandig-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-organic.webp" id="resultsDivSecond" width="100%">
+            <p id="resultsDivInfoSecond">Which one of these options describes your brand better? Which one of these options describes your brand better? Which one of these options describes your brand better?</p>
+            <div class="separator" style="height: 16vw;"></div>
+          </div>
+          <!-- ----------ENDING---------- -->
+          <div class="width-container-color">
+            <div class="max-width-container">
+              <div class="separator" style="height: 20vw;"></div>
+              <div alt="Cloud with umbrella animation" class="animation-container">
+                <div height="100px"></div>
+                <div class="umbrella">
+                  <img alt="A tiny umbrella" style="z-index: 1;" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-umbrella.svg">
+                </div>
+                <img alt="A cute cloud character" class="stormy" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-stormy.svg">
+              </div>
+              <p>How did it go? Design is not an exact science, surely there's other ways to build your visual identity. Want to try randomizing the results of your answers? If you're lucky, you may come to a different result!</p>
+              <div class="separator" style="height: 6vw;max-height: 40px;"></div>
+              <button title="Randomize current results" alt="Button to randomize the current results" class="action-button" id="button-randomize">RANDOMIZE</button>
+              <div class="separator" style="height: 4vw;max-height: 40px;"></div>
+              <a title="Restart the quiz" alt="Button to restart the quiz" href="visualittle.html">
+                
+                <p>↺ RESTART</p>
+                
+              </a>
+              <div class="separator" style="height: 16vw;"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div style="height: 40px;"></div>
-      <div id="screen-results" class="hide">
-        <div class="separator"></div>
-        <div class="child-container" id="screen-start">
-          <div class="separator"></div>
-          <img class="center-img" src="img/visualittle-animations/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-animation-results.gif">
-          <div class="separator"></div>
-          <p>HOORAY! Thanks for answering! Here are a few recommendations for your brand's visual identity.</p>
-        </div>
-        <div class="separator" id="scrollStop"></div>
-        <div>
-          <h2 style="text-align:center;" id="resultsDivHeader">Organic Luxury</h2>
-        </div>
-        <div style="display:flex; justify-content: space-between;">
-          <div display="flex">Organic</div>
-          <div display="flex">Technologic</div>
-        </div>
-        <div class="separator"></div>
-        <div style="display:flex; justify-content:center;" class="progress-bottom">
-          <div style="display:flex; justify-content:right;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-left" id="percent-progress-org"></div>
-          </div>
-          <div style="display:flex; justify-content:left;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-right" id="percent-progress-art"></div>
-          </div>
-        </div>
-        <div style="display:flex; justify-content: space-between;">
-          <div display="flex">Powerful</div>
-          <div display="flex">Delicate</div>
-        </div>
-        <div style="display:flex; justify-content:center;" class="progress-bottom">
-          <div style="display:flex; justify-content:right;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-left" id="percent-progress-pow"></div>
-          </div>
-          <div style="display:flex; justify-content:left;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-right" id="percent-progress-del"></div>
-          </div>
-        </div>
-        <div style="display:flex; justify-content: space-between;">
-          <div display="flex">Exclusive</div>
-          <div display="flex">Inclusive</div>
-        </div>
-        <div style="display:flex; justify-content:center;" class="progress-bottom">
-          <div style="display:flex; justify-content:right;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-left" id="percent-progress-lux"></div>
-          </div>
-          <div style="display:flex; justify-content:left;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-right" id="percent-progress-inc"></div>
-          </div>
-        </div>
-        <div style="display:flex; justify-content: space-between;">
-          <div display="flex">Disruptive</div>
-          <div display="flex">Classic</div>
-        </div>
-        <div style="display:flex; justify-content:center;" class="progress-bottom">
-          <div style="display:flex; justify-content:right;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-left" id="percent-progress-mod"></div>
-          </div>
-          <div style="display:flex; justify-content:left;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-right" id="percent-progress-cla"></div>
-          </div>
-        </div>
-        <div style="display:flex; justify-content: space-between;">
-          <div display="flex">Serious</div>
-          <div display="flex">Fun</div>
-        </div>
-        <div style="display:flex; justify-content:center;" class="progress-bottom">
-          <div style="display:flex; justify-content:right;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-left" id="percent-progress-ser"></div>
-          </div>
-          <div style="display:flex; justify-content:left;" class="progress-bottom">
-            <div style="width: 30%;" class="progress-parameter-right" id="percent-progress-fun"></div>
-          </div>
-        </div>
-        <div class="separator"></div>
-
-
-
-        <div><p id="resultsDivIntro1">organic luxury brand offers the most exclusive side of nature's benefits with the guarantee of a right treatment in the process of the materials used for the production of it's products.</p>
-          <p id="resultsDivIntro2">organic luxury brand offers the most exclusive side of nature's benefits with the guarantee of a right treatment in the process of the materials used for the production of it's products.</p></div>
-        
-       
-        <div class="separator"></div>
-        <div>
-          <h2 style="text-align:center;">Logo</h2>
-        </div>
-        <div class="separator"></div>
-        <img src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg" id="resultsDivLogo">
-        <div class="separator"></div>
-        <div id="resultsDivInfoLogo">Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better?</div>
-        <div class="separator"></div>
-        <div>
-          <h2 style="text-align:center;">Colors</h2>
-        </div>
-        <div class="separator"></div>
-        <div style="display:flex; justify-content: space-between; margin: auto;">
-          <div id="resultsDivColor1" style="display: flex; background-color: #027FFF; flex: 1;border-radius: 1.5rem 0rem 0rem 1.5rem;min-height: 200px;"></div>
-          <div id="resultsDivColor2" style="display: flex; background-color: #17224D; flex: 1;"></div>
-          <div id="resultsDivColor3" style="display: flex; background-color: #F6FAFB; flex: 1;"></div>
-          <div id="resultsDivColor4" style="display: flex; background-color: #19E7E2; flex: 1;border-radius: 0rem 1.5rem 1.5rem 0rem;"></div>
-        </div>
-        <div class="separator"></div>
-        <div id="resultsDivInfoColor">Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better?</div>
-        <div class="separator"></div>
-        <div>
-          <h2 style="text-align:center;">Fonts</h2>
-        </div>
-        <div class="separator"></div>
-        <img src="img/visualittle-svg/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-logotype.svg" id="resultsDivFont">
-        <div class="separator"></div>
-        <div id="resultsDivInfoFont">Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better?</div>
-        <div class="separator"></div>
-        <div>
-          <h2 style="text-align:center;">Secondary</h2>
-        </div>
-        <div class="separator"></div>
-        <img src="img/visualittle-webp/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-secondary-element-mild-organic.webp" id="resultsDivSecond" class="second-img">
-        <div class="separator"></div>
-        <div id="resultsDivInfoSecond">Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better? Which one of these options describes RemarkaBall better?</div>
-        <div class="separator"></div>
-        <div class="child-container">
-          <div class="separator"></div>
-          <img class="center-img" src="img/visualittle-animations/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-animation-rest.gif">
-          <div class="separator"></div>
-          <p>How did it go? Design is not an exact science, surely there's other ways to build your visual identity. Want to try randomizing the results of your answers? If you're lucky, you may come to a different result!</p>
-          <div class="separator"></div>
-          <button style="width:50%;" id="button-randomize"> Randomize </button>
-          <div class="separator"></div>
-          <a href="index.html">
-            <p style="text-decoration:underline;">Restart Quiz</p>
-          </a>
-          <div class="separator"></div>
-        </div>
-        <div style="height: 1%;"></div>
-      </div>
-    </div>
-    <div class="full-yellow">
-      <div class="main-container">
-        <div class="child-container">
-          <div style="height: 60px;"></div>
-          <p class="highligted-text">How does it work?</p>
-          <p>Visualittle will ask you to choose between two options in 20 different situations. It’s an abstraction exercice in which you have to ask yourself what would your brand choose in a situation like that?</p>
-        </div>
-      </div>
-    </div>
-    <div class="two-color-background">
-      <div style="height: 30px;"></div>
-      <img class="center-img" src="img/visualittle-animations/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-hello-01.gif" style="max-width: 240px;">
-      <div style="height: 60px;"></div>
-    </div>
-    <div class="full-yellow" style="background-color: #efefef;">
-      <div class="main-container">
-        <div class="child-container">
+      </section>
+      <!-- ----------BOTTOM---------- -->
+      <section alt="Know more section">
+        <div class="main-container">
+          <div class="max-width-container bottom-section">
+            <div class="separator" style="height: 10vw; max-height: 50px;"></div>
+            
+            <img alt="Magic sparks icon" width="50px" class="icon-img" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-icon-stars.svg">
+            <h2>How does <br>it work? </h2>
+            <p>Visualittle will ask you to choose between two options in 20 different situations. It’s an abstraction exercise in which you have to consider your brand's personality to decide what your brand would choose in that situation.</p>
           
-          <p class="highligted-text">Brand personality?</p>
-          <p>Your brand’s personality are emotional traits and symbolic attributes associated with the brand itself, its behavior, its environment and its target audience. The good news is that a brand’s personality can be translated into visual choices to create a fitting visual identity!</p>
+          
+            <img alt="Lightning icon" width="50px" class="icon-img" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-icon-lightning.svg">
+            <h2>What would <br>my brand do? </h2>
+            <p>Your brand’s personality are emotional traits and symbolic attributes associated with the brand itself, its behavior, its environment and its target audience. Is your brand delicate and sensible or is it strong and mighty?</p>
+            <p>The good news is that a brand’s personality can be translated into visual choices to create a fitting visual identity! And your answers will help Visualittle do it!</p>
+          
+          
+            <img alt="Rainbow icon" width="70px" class="icon-img" src="img/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-main-icon-rainbow.svg">
+            <h2>Getting a <br>little visual! </h2>
+            <p>Your answers will give Visualittle an average of its brand personality traits and turn them into matching design ideas that you can use to design your brand’s visual identity. As easy as that! Make sure to press the "NONE" button if no answer fits your brand's personality.</p>
+            <div class="separator" style="height: 10vw;"></div>
+            <button title="Start Visualittle Quiz" alt="Button to start the quiz" class="action-button color-background" id="start-button-bottom">START</button>
+            <div class="separator" style="height: 20vw; max-height: 80px;"></div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="two-color-background" style="background: linear-gradient(to bottom, #efefef 65%, #F6BF1C 0%);">
-      <div style="height: 60px;"></div>
-      <img class="center-img" src="img/visualittle-animations/visualittle-branding-visual-identity-graphic-design-quiz-ramon-bosch-hello-02.gif" style="max-width: 300px;">
-    </div>
-    <div class="full-yellow">
+      </section>
+    </main>
+    <!-- ----------FOOTER---------- -->
+    <footer class="dark-background">
       <div class="main-container">
-        <div class="child-container">
-          <div style="height: 80px;"></div>
-          <p class="highligted-text">Getting a little visual!</p>
-          <p>Your answers will give Visualittle an average of its brand personality parameters and turn them into matching design ideas that you can use to design your brand’s visual identity. As easy as that!</p>
-          <div style="height: 40px;"></div>
-          <button id="start-button-bottom">Let's do it!</button>
-          <div style="height: 80px;"></div>
+        <div class="max-width-container clear-color">
+          <div class="separator" style="height: 10vw; max-height: 50px;"></div>
+          <h3 class="clear-color">About</h3>
+          <p class="clear-color">Visualittle will ask you to choose between two options in 20 different situations. It’s an abstraction exercise in which you have to consider your brand's personality to decide what your brand would choose in that situation.</p>
+          <a title="Go to ramonbosch.com" alt="Button to go to the developer's site" href="https://ramonbosch.com/">
+            <p class="clear-color">Developer’s site ↗</p>
+          </a>
+          <div class="separator" style="height: 10vw; max-height: 50px;"></div>
+          <p class="clear-color">© Ramon Bosch 2022</p>
+          <div class="separator" style="height: 18vw; max-height: 50px;"></div>
         </div>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
